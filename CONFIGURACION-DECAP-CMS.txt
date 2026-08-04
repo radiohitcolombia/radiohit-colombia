@@ -1,0 +1,32 @@
+RADIO HIT COLOMBIA - DECAP CMS (FASE 1)
+
+Esta versión incluye:
+- Sitio completo.
+- Panel en /admin/.
+- Editor de noticias desde noticias.json.
+- Editor de páginas desde paginas.json.
+- Subida de imágenes a /uploads/.
+- Página automática de noticia: noticia.html?slug=identificador
+- Página automática general: pagina.html?slug=identificador
+
+IMPORTANTE SOBRE EL INICIO DE SESIÓN
+Decap CMS necesita autenticación OAuth para escribir en GitHub.
+El archivo admin/config.yml ya apunta al repositorio:
+radiohitcolombia/radiohit-colombia
+
+El siguiente paso será configurar el proveedor de autenticación. La vía más sencilla y gratuita es usar Netlify solamente como proveedor de autenticación, mientras Cloudflare continúa alojando la web.
+
+SUBIDA A GITHUB
+1. Descomprime este ZIP.
+2. En el repositorio, selecciona Add file > Upload files.
+3. Sube TODOS los archivos y carpetas.
+4. Confirma el commit en la rama main.
+
+CLOUDFLARE
+Conecta el repositorio radiohitcolombia/radiohit-colombia a un proyecto nuevo de Cloudflare Pages.
+Framework preset: None
+Build command: dejar vacío
+Build output directory: /
+
+NOTA
+No elimines la carpeta admin ni los archivos noticias.json y paginas.json.

@@ -1,0 +1,29 @@
+RADIO HIT COLOMBIA - EDICION MANUAL
+
+1. ACTUALIZAR NOTICIAS
+Abra el archivo noticias.json con Visual Studio Code o Bloc de notas.
+Cada noticia contiene:
+- categoria: texto pequeño sobre la noticia.
+- titulo: título principal.
+- descripcion: resumen.
+- imagen: dirección web de la imagen o una ruta local, por ejemplo img/noticia1.jpg.
+- enlace: página o dirección que se abrirá al hacer clic.
+- nueva_pestana: true para abrir otra pestaña o false para abrir en la misma.
+
+Para agregar una noticia, copie un bloque completo entre llaves y sepárelo del anterior con una coma.
+No agregue coma después de la última noticia.
+
+2. EDITAR LA PÁGINA
+- index.html: textos, enlaces, menú y estructura.
+- styles.css: colores, tamaños, fuentes y diseño.
+- script.js: animaciones y funcionamiento.
+
+3. PUBLICAR CAMBIOS
+Comprima TODOS los archivos del proyecto en ZIP, asegurándose de que index.html quede en la raíz.
+Luego use New deployment en Cloudflare y suba el ZIP.
+
+4. IMPORTANTE
+Después de publicar, presione Ctrl + F5 para ver la versión nueva sin caché.
+
+
+VERSIÓN 7: Los títulos de Noticias, Facebook y Nuestra App usan la misma tipografía Poppins en negrita de INTERACTÚA CON NOSOTROS. También se corrigieron iconos incompatibles de Font Awesome Pro.

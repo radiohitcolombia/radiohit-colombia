@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noticia | Radio Hit Colombia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.article-shell{max-width:950px;margin:0 auto;padding:130px 24px 70px;color:#fff}.article-shell a{color:#11eaf2}.article-card{background:#07020f;border:1px solid rgba(17,234,242,.25);border-radius:22px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.35)}.article-card img{width:100%;max-height:520px;object-fit:cover}.article-copy{padding:32px}.article-tag{display:inline-block;background:#5300f8;color:#fff;padding:7px 12px;border-radius:8px;font-weight:700}.article-copy h1{font-size:clamp(30px,5vw,56px);line-height:1.1;margin:18px 0}.article-meta{opacity:.75;margin-bottom:24px}.article-body{font-size:18px;line-height:1.8;white-space:pre-wrap}.back-link{display:inline-block;margin-bottom:20px}
+</style>
+</head>
+<body>
+<main class="article-shell">
+<a class="back-link" href="index.html">← Volver al inicio</a>
+<article id="article" class="article-card"><div class="article-copy">Cargando noticia…</div></article>
+</main>
+<script>
+const params=new URLSearchParams(location.search);const slug=params.get('slug');
+const esc=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
+fetch('noticias.json',{cache:'no-store'}).then(r=>r.json()).then(data=>{const items=Array.isArray(data)?data:(data.items||[]);
+ const item=items.find(x=>x.slug===slug); if(!item) throw new Error('No encontrada');
+ document.title=`${item.titulo} | Radio Hit Colombia`;
+ document.getElementById('article').innerHTML=`${item.imagen?`<img src="${esc(item.imagen)}" alt="${esc(item.titulo)}">`:''}<div class="article-copy"><span class="article-tag">${esc(item.categoria||'Noticias')}</span><h1>${esc(item.titulo)}</h1><div class="article-meta">${esc(item.fecha||'')}</div><div class="article-body">${esc(item.contenido||item.descripcion||'')}</div></div>`;
+}).catch(()=>{document.getElementById('article').innerHTML='<div class="article-copy"><h1>Noticia no encontrada</h1><p>Revisa el enlace o vuelve al inicio.</p></div>'});
+</script>
+</body>
+</html>

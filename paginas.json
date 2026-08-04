@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "slug": "quienes-somos",
+      "titulo": "Quiénes somos",
+      "resumen": "Conoce la historia y el equipo de Radio Hit Colombia.",
+      "imagen": "",
+      "contenido": "Radio Hit Colombia es una emisora digital con música, información, entretenimiento y contenidos para nuestra comunidad."
+    },
+    {
+      "slug": "contacto",
+      "titulo": "Contacto",
+      "resumen": "Comunícate con Radio Hit Colombia.",
+      "imagen": "",
+      "contenido": "Puedes escribirnos al correo pautaradiohit@gmail.com o comunicarte por nuestras redes sociales."
+    }
+  ]
+}

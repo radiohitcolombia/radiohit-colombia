@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "categoria": "Radio Hit",
+      "titulo": "Conéctate con toda la energía de Radio Hit Colombia",
+      "descripcion": "Música, información, premios y entretenimiento durante todo el día.",
+      "imagen": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWk_OPXNTrhuTwRNJVlje7VawAM8yha-Wn4EXCQ3b-8uq9Q9kRVLSFPmNnWx1TqgcE1JuQjYG8ztr22kGZSwlSWepgwnCSdUiw5QgDlXIMQtueDhOSkSBXF-1pm9Z62iCbjtvXnLRMpEEpdsxv7KmGrx-TWP48_R-rPcWStLoHxlmkbw6AIT4wQKFB_Fnp/s1600/Radio%20Hit%20logo%2024%20sin%20fondo.png",
+      "enlace": "",
+      "nueva_pestana": false,
+      "slug": "energia-radio-hit",
+      "fecha": "2026-08-04",
+      "contenido": "Música, información, premios y entretenimiento durante todo el día."
+    },
+    {
+      "categoria": "Programación",
+      "titulo": "Escucha nuestra programación en vivo",
+      "descripcion": "Disfruta tus programas favoritos desde cualquier lugar.",
+      "imagen": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheGVqp0EAhAI4FpWAY6a8qRqWk1rvZNn70muz5BdxNnQZ0uRAoU5KYkh2LQyNCRd9BW_V8E91gsKybLILZltPS5dC66STODehAPxGi8luapBgS4zgbY8UIIwRkBSvWsQhnKVg1lOoC4GcrNUmgO3V7dPi2w71omb641MhyoJK8jcs0sKyVAI1N0YNIc0L1/s1600/charlie-director.jpg",
+      "enlace": "",
+      "nueva_pestana": false,
+      "slug": "programacion-en-vivo",
+      "fecha": "2026-08-04",
+      "contenido": "Disfruta tus programas favoritos desde cualquier lugar."
+    },
+    {
+      "categoria": "Nuestra App",
+      "titulo": "Radio Hit también está en tu celular",
+      "descripcion": "Descarga la aplicación y lleva la emisora siempre contigo.",
+      "imagen": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilSGLLBVy3MHciRrjn5PjAvN1zio1i3Gd5cjgXukexmvHoXbeCdljuO_Q7PzVwrwje8kkGlW2_psvQwW8mJg7-83lTegY9Kcm6eLG0yYaklU1z7sNjj5uiyGWiAsTquueqov7ej2LQxS8jvN4eSQg8-TVpOfPmEedPc5lRUOk9PMfu8cVaIr1OMEQP3veO/s1600/App-Radio-Hit.jpg",
+      "enlace": "https://play.google.com/store/apps/details?id=com.asiserver.radiohit&pcampaignid=web_share",
+      "nueva_pestana": true,
+      "slug": "radio-hit-en-tu-celular",
+      "fecha": "2026-08-04",
+      "contenido": "Descarga la aplicación y lleva la emisora siempre contigo."
+    },
+    {
+      "categoria": "Comunidad",
+      "titulo": "Síguenos y participa con Radio Hit",
+      "descripcion": "Entérate de novedades, concursos, eventos y transmisiones.",
+      "imagen": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyvvFGPVafu0oytnzod9feuD6pZtOOvkU_xpFa4ElgO5brOAzWMDF482hh4WMOauqx74OagQ7GeNTpS_VAH7koopt8HfvTwSwMaXLbXdx7sm0Ia4TR5g4EPiDj_OCggNVK2KChXpW0-fPNRBd46AhesBprEOsFcI66ooBU__fNg-4wAh9JJB9woHe_Ds1K/s1600/radio-hit-colombia.jpg",
+      "enlace": "https://www.facebook.com/radiohitcolombia/",
+      "nueva_pestana": true,
+      "slug": "comunidad-radio-hit",
+      "fecha": "2026-08-04",
+      "contenido": "Entérate de novedades, concursos, eventos y transmisiones."
+    }
+  ]
+}

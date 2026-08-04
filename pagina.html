@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página | Radio Hit Colombia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>.page-shell{max-width:950px;margin:0 auto;padding:130px 24px 70px;color:#fff}.page-card{background:#07020f;border:1px solid rgba(17,234,242,.25);border-radius:22px;padding:36px;box-shadow:0 18px 60px rgba(0,0,0,.35)}.page-card img{width:100%;border-radius:16px;margin:18px 0}.page-card h1{font-size:clamp(34px,5vw,58px);line-height:1.1}.page-body{font-size:18px;line-height:1.8;white-space:pre-wrap}.page-shell a{color:#11eaf2}</style>
+</head>
+<body><main class="page-shell"><a href="index.html">← Volver al inicio</a><article id="page" class="page-card">Cargando página…</article></main>
+<script>
+const slug=new URLSearchParams(location.search).get('slug');const esc=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
+fetch('paginas.json',{cache:'no-store'}).then(r=>r.json()).then(data=>{const items=Array.isArray(data)?data:(data.items||[]);const item=items.find(x=>x.slug===slug);if(!item)throw new Error();document.title=`${item.titulo} | Radio Hit Colombia`;document.getElementById('page').innerHTML=`<h1>${esc(item.titulo)}</h1>${item.resumen?`<p>${esc(item.resumen)}</p>`:''}${item.imagen?`<img src="${esc(item.imagen)}" alt="${esc(item.titulo)}">`:''}<div class="page-body">${esc(item.contenido||'')}</div>`}).catch(()=>document.getElementById('page').innerHTML='<h1>Página no encontrada</h1>');
+</script></body></html>
