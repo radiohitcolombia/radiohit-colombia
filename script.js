@@ -41,8 +41,7 @@ function escapeHtml(value=''){
 }
 function newsCard(item){
   const target=item.nueva_pestana?' target="_blank" rel="noopener"':'';
-  const rawLink=item.enlace||((item.slug)?`noticia.html?slug=${encodeURIComponent(item.slug)}`:'#');
-  const link=escapeHtml(rawLink);
+  const link=escapeHtml(item.enlace||'#');
   const image=escapeHtml(item.imagen||'');
   const title=escapeHtml(item.titulo||'Sin título');
   return `<article class="news-card">
@@ -82,8 +81,7 @@ async function loadNews(){
   try{
     const response=await fetch(`noticias.json?v=${Date.now()}`,{cache:'no-store'});
     if(!response.ok)throw new Error(`HTTP ${response.status}`);
-    const data=await response.json();
-    const items=Array.isArray(data)?data:(data.items||[]);
+    const items=await response.json();
     if(!Array.isArray(items)||!items.length)throw new Error('No hay noticias');
     newsTrack.innerHTML=items.map(newsCard).join('');
     newsState.cards=[...newsTrack.querySelectorAll('.news-card')];
