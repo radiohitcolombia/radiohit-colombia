@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: radiohitcolombia/radiohit-colombia
+  name: git-gateway
   branch: main
 
 locale: es
