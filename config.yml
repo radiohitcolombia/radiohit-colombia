@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: radiohitcolombia/radiohit-colombia
+  branch: main
+
+locale: es
+publish_mode: simple
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: configuracion_inicio
+    label: Página de inicio
+    files:
+      - name: noticias_inicio
+        label: Carrusel de noticias
+        file: noticias.json
+        format: json
+        fields:
+          - label: Noticias
+            name: noticias
+            widget: list
+            summary: "{{fields.titulo}}"
+            fields:
+              - {label: Categoría, name: categoria, widget: string}
+              - {label: Título, name: titulo, widget: string}
+              - {label: Descripción, name: descripcion, widget: text}
+              - {label: Imagen, name: imagen, widget: image}
+              - {label: Enlace, name: enlace, widget: string, required: false, default: "#"}
+              - {label: Abrir en pestaña nueva, name: nueva_pestana, widget: boolean, default: false}
+
+  - name: noticias
+    label: Noticias completas
+    label_singular: Noticia
+    folder: content/noticias
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: Título, name: title, widget: string}
+      - {label: Fecha, name: date, widget: datetime}
+      - {label: Categoría, name: category, widget: string, default: Noticias}
+      - {label: Imagen destacada, name: image, widget: image, required: false}
+      - {label: Resumen, name: summary, widget: text}
+      - {label: Contenido, name: body, widget: markdown}
+
+  - name: paginas
+    label: Páginas
+    label_singular: Página
+    folder: content/paginas
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: Título, name: title, widget: string}
+      - {label: Descripción, name: description, widget: text, required: false}
+      - {label: Contenido, name: body, widget: markdown}
